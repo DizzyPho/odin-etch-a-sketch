@@ -34,5 +34,11 @@ function resetGrid() {
     fillGrid(currentSize);
 }
 
-
+function promptGridSize() {
+    let size;
+    do {
+        size = Number(prompt("What should the new grid size be? Size cannot be larger than 100"));
+    } while (size > 100 || isNaN(size) )
+    return size;
+}
 fillGrid(16);
