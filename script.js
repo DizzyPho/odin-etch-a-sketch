@@ -9,6 +9,7 @@ function fillGrid(size) {
     const squaresAmount = size ** 2;
     const squareSize = 100/size;
     const grid = document.querySelector("#container");
+    grid.replaceChildren(); 
  
     for (let i = 0; i < squaresAmount; i++) {
         const square = createGridSquare();
