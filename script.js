@@ -28,7 +28,7 @@ function fillGrid(size) {
 }
 
 function colorSquare(event) {
-    event.target.style.background = "blue";
+    event.target.style.background = randomColor();
     console.log("enter")
 }
 
@@ -48,6 +48,13 @@ function promptGridSize() {
 function resizeGrid() {
     const size = promptGridSize();
     fillGrid(size);
+}
+
+function randomColor() {
+    const r = Math.random() * 255;
+    const g = Math.random() * 255;
+    const b = Math.random() * 255;
+    return `rgb(${r},${g},${b})`
 }
 
 fillGrid(16);
