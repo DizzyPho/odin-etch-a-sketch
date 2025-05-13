@@ -1,5 +1,8 @@
 let currentSize = 0;
 
+const reset = document.querySelector("#reset")
+reset.addEventListener("click",resetGrid);
+
 function createGridSquare() {
     const square = document.createElement("div");
     square.classList.toggle("gridSquare");
@@ -26,5 +29,10 @@ function colorSquare(event) {
     event.target.style.background = "blue";
     console.log("enter")
 }
+
+function resetGrid() {
+    fillGrid(currentSize);
+}
+
 
 fillGrid(16);
