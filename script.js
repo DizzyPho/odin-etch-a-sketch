@@ -1,3 +1,5 @@
+let currentSize = 0;
+
 function createGridSquare() {
     const square = document.createElement("div");
     square.classList.toggle("gridSquare");
@@ -6,6 +8,7 @@ function createGridSquare() {
 }
 
 function fillGrid(size) {
+    currentSize = size;
     const squaresAmount = size ** 2;
     const squareSize = 100/size;
     const grid = document.querySelector("#container");
