@@ -2,6 +2,8 @@ let currentSize = 0;
 
 const reset = document.querySelector("#reset")
 reset.addEventListener("click",resetGrid);
+const resize = document.querySelector("#change-size")
+resize.addEventListener("click", resizeGrid)
 
 function createGridSquare() {
     const square = document.createElement("div");
@@ -41,4 +43,10 @@ function promptGridSize() {
     } while (size > 100 || isNaN(size) )
     return size;
 }
+
+function resizeGrid() {
+    const size = promptGridSize();
+    fillGrid(size);
+}
+
 fillGrid(16);
