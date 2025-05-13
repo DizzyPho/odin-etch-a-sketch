@@ -40,7 +40,8 @@ function promptGridSize() {
     let size;
     do {
         size = Number(prompt("What should the new grid size be? Size cannot be larger than 100"));
-    } while (size > 100 || isNaN(size) )
+    } while (size > 100 || isNaN(size) || size < 1)
+    console.log(size);
     return size;
 }
 
