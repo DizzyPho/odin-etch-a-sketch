@@ -1,6 +1,7 @@
 function createGridSquare() {
     const square = document.createElement("div");
     square.classList.toggle("gridSquare");
+    square.addEventListener("mouseenter", colorSquare);
     return square;
 }
 
@@ -17,4 +18,7 @@ function fillGrid(size) {
     }
 }
 
-fillGrid(10);
+function colorSquare(event) {
+    event.target.style.background = "blue";
+    console.log("enter")
+}
