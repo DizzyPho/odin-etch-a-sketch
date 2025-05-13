@@ -26,3 +26,5 @@ function colorSquare(event) {
     event.target.style.background = "blue";
     console.log("enter")
 }
+
+fillGrid(16);
